@@ -1,0 +1,18 @@
+body{
+	font-family: 'Codystar', sans-serif;
+	font-size: 72px;
+	background-color:black;
+	color: white;
+	text-align:center;
+	height: 100%;
+	overflow:hidden;
+}
+#ux{
+	position: fixed;
+	bottom: 0px;
+	height: 100px;
+	background: rgba(10,10,10,0.2);
+	width: 100%;
+	align:center;
+	padding: 10px;
+}
