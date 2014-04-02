@@ -13,6 +13,15 @@ body{
 	height: 100px;
 	background: rgba(10,10,10,0.2);
 	width: 100%;
-	align:center;
 	padding: 10px;
+}
+
+#log{
+	float:right;
+	font-size: 12px;
+	text-align:left;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height:80px;
 }

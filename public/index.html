@@ -12,13 +12,24 @@
 
 	<div id="ux">
 		<input type="text" ng-model="message"/>
-		<select ng-options="type for type in types" ng-model="type"></select>
+		<select ng-options="type for type in types" ng-model="type">
+		</select>
 		<button ng-click="postMessage()">send</button>
+
+		<span log="localLog" id="log"></span>
 	</div>
+
+
+
+<!-- begin javascript -->
 
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/sugar/1.3.9/sugar.min.js"></script>
+
 	<script src="client.js"></script>
+	<script src="ctrl.js"></script>
+	<script src="screen.js"></script>
+	<script src="log.js"></script>
 </body>
 </html>
