@@ -16,12 +16,6 @@
 
 		socket.emit('needlog');
 
-		socket.on('logrequest', function () {
-			if($scope.localLog.length){
-				socket.emit('logsubmit', {log: $scope.localLog});
-			}
-		});
-
 		socket.on('log', function (data) {
 			if(data.log && data.log.length > $scope.localLog.length){
 				$scope.localLog = data.log;
