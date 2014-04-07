@@ -2,34 +2,46 @@
 <html ng-app="myApp">
 <head>
 <meta charset=utf-8 />
-<title>Cross Pollinate</title>
-<link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+<title>Swadesh Game</title>
 <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body ng-controller="ctrl">
 
-	<div screen source="last"></div>
+	<p ng-if="!syncedWithServer">
+		<input type="text" ng-model="player.name"/>Name
+		<br>
+		<select ng-options="type for type in playerTypes" ng-model="player.type"></select>Type of client
+		<button ng-click="login()">Start</button>
+	</p>
 
-	<div id="ux">
-		<input type="text" ng-model="message"/>
-		<select ng-options="type for type in types" ng-model="type">
-		</select>
-		<button ng-click="postMessage()">send</button>
+	<div ng-if="syncedWithServer">
+		<div ng-if="player.type === 'map'">
+			<div map source="mapdata"></div>
+		</div>
 
-		<span log="localLog" id="log"></span>
+		<div ng-if="player.type === 'player'">
+			<div player-ux></div>
+		</div>
+
+		<ul class="playerlist">
+			<li ng-repeat="pp in players">{{pp.name}}</li>
+		</ul>
 	</div>
-
-
 
 <!-- begin javascript -->
 
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-git2.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/sugar/1.3.9/sugar.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/sugar/1.4.1/sugar-full.min.js"></script>
 
 	<script src="client.js"></script>
 	<script src="ctrl.js"></script>
-	<script src="screen.js"></script>
-	<script src="log.js"></script>
+
+	<script src="player.js"></script>
+	<script src="player-ux.js"></script>
+
+	<script src="map.js"></script>
+	<script src="terrain.js"></script>
 </body>
 </html>

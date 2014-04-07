@@ -1,6 +1,6 @@
 {
-  "name": "Sock4",
-  "description": "websockets demo",
+  "name": "Swadesh Game",
+  "description": "A word game for anatomically modern humans",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

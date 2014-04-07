@@ -1,46 +1,18 @@
 body{
-	font-family: 'Codystar', sans-serif;
-	font-size: 72px;
+	font-family: sans-serif;
+	font-size: 36px;
 	background-color:black;
 	color: white;
 	text-align:center;
 	height: 100%;
 	overflow:hidden;
-}
-#ux{
-	position: fixed;
-	bottom: 0px;
-	height: 100px;
-	background: rgba(10,10,10,0.2);
-	width: 100%;
-	padding: 10px;
+	margin:0px;
 }
 
-#log{
-	float:right;
-	font-size: 12px;
-	text-align:left;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	width: 200px;
-	height:80px;
-}
-
-.latestimg{
-	width:100%;
-	max-width:100%;
-}
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.playerlist{
+	position:absolute;
+	right:100px;
+	top:20px;
+	font-size:18px;
+	color: '#ffffff;
 }
